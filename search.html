@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="widt=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-  <style>
+  <style>  
     body {
       background-image: url('achtergrondsearch.png');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
     }
+    
+  .topnav .search-container {
+  float: left;
+  margin-left: 35%;
+  size: 150px;
+    margin-top: 200px;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 40px;
+  opacity: 100px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
   </style>
   </head>
     <header>
@@ -23,5 +71,13 @@
       <li><a href="armbanden.html">Armbanden</a></li>
       <li><a href="kettingen.html">Kettingen</a></li>
     </ul>
+    <div class="topnav">
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
   </body>
 </html>
